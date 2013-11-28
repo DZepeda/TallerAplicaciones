@@ -3,7 +3,8 @@
 	$email = $_POST["email"];
 	$pass = $_POST["login"];
 	$edad = $_POST["edad"];
-
+//hjgghjhgjhjgjhg
+	//gmjmmj
 	include("conexion.php");
 	$consulta = "SELECT * FROM cliente WHERE email='$email'";
 	$ejecutar_consulta = $conexion->query($consulta);
