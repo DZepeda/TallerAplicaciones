@@ -18,7 +18,6 @@
 	if($flag==0){
 		header("Location: index.html");
 	}
-	
-	$conexion->close();
+$conexion->close();
 	
 ?>

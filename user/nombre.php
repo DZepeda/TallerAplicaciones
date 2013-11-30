@@ -1,4 +1,5 @@
 <?php
+//saca el nombre del cliente de la base de datos.
 	$email = $_SESSION["usuario"];
 	include("conexion.php");
 	$consulta = "select nombre_completo from cliente where email=\"$email\"";

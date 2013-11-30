@@ -20,9 +20,7 @@
 
 
 <script type="text/javascript">
-
 // funcion con ajax
-
 function showHint(str){
 	if (str.length==0){ 
   		document.getElementById("txtHint").innerHTML="";
@@ -33,23 +31,17 @@ function showHint(str){
   	}else{// code for IE6, IE5
   		xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
   	}
-
-xmlhttp.onreadystatechange=function(){
-  if (xmlhttp.readyState==4 && xmlhttp.status==200){
-    document.getElementById("txtHint").innerHTML=xmlhttp.responseText;
-  }
- }
-xmlhttp.open("GET","gethint.php?q="+str,true);
-xmlhttp.send();
+	xmlhttp.onreadystatechange=function(){
+  		if (xmlhttp.readyState==4 && xmlhttp.status==200){
+    		document.getElementById("txtHint").innerHTML=xmlhttp.responseText;
+  		}
+ 	}
+	xmlhttp.open("GET","gethint.php?q="+str,true);
+	xmlhttp.send();
 }
+</script>
 
-
-
- </script>
 </head>
-
-
-
     <body>
         <div class="container">
 			<section class="main">
@@ -74,7 +66,5 @@ xmlhttp.send();
 				</form>​​
 			</section>	
         </div>
-
-
     </body>
 </html>

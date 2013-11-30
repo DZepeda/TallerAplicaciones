@@ -3,7 +3,7 @@
 	{
 		$servidor="localhost";
 		$usuario="root";
-		$password="";
+		$password="root";
 		$bd="wifipublicity";
 
 		$conectar = new mysqli($servidor,$usuario,$password,$bd);
