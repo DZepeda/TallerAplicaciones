@@ -1,0 +1,44 @@
+/*colores
+celeste claro = #C3E5F9
+celeste oscuro = #12A89D
+rojo = #B30F2A
+azul = #1C4583
+*/
+*{margin:0;}
+article{
+	float:left;
+	width:100%;
+}
+body{
+	background:#C3E5F9;
+	color:white;
+	font-size:16px;
+	font-family:Arial;
+	text-shadow:1px 1px 0 black;
+}
+section{
+	background:#12A89D;
+	margin:10px auto;
+	overflow:hidden;
+	padding:10px 0;
+	text-align:center;
+	width:1000px;
+}
+.fila1{
+	background:#B30F2A;
+}
+.fila2{
+	background:#1C4583;
+}
+
+@media screen and (max-width:1000px){
+	section{
+		width:100%;
+	}
+}
+
+@media screen and (max-width:1000px){
+	article{
+		width:100%;
+	}
+}
