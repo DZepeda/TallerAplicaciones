@@ -26,30 +26,27 @@
 								if($i!=10 || $edad>17){
 									$consulta = "INSERT INTO gustoCliente (email, ID_TipoComida) VALUES ('$email','$i')";
 									$ejecutar_consulta = $conexion->query(utf8_encode($consulta));
-								}
+									$mensaje = "Cliente Registrado :)";
+								}else{
+									$mensaje = "Ud. es menor de 18 años, no puede seleccionar bebidas alcoholicas";
+								} 
 							}
 						}
-						$conexion->close();
-						header("Location: index.html");
 					}else{
-						$mensaje = "Problema BD :(";
-						header("Location: registro.php?mensaje=$mensaje");
+						$mensaje = "Usuario No registrado, Problema con la Base de Datos";
 					}
 				}else{
-					$mensaje = "Problemas con la edad";
-					header("Location: registro.php?mensaje=$mensaje");
+					$mensaje = "Ud. es menor de edad, no puede registrarse al sistema";
 				}
 			}else{
 				$mensaje = "Tiene que escoger al menos 1 tipo de comida";
-					header("Location: registro.php?mensaje=$mensaje");
 			}		
-			
 		}else{
 			$mensaje = "La contraseña debe estar entre 6 a 16 caracteres";
-			header("Location: registro.php?mensaje=$mensaje");
 		}
 	}else{
-		$mensaje = "Ya existe";
-		header("Location: registro.php?mensaje=$mensaje");
+		$mensaje = "Ya existe el correo electronico en el sistema";
 	}
+	$conexion->close();
+	header("Location: index.php?mensaje=$mensaje");
 ?>
